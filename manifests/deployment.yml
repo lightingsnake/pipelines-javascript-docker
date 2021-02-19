@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: lightingsnakepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lightingsnakepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: lightingsnakepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: lightingsnakepipelinesjavascriptdocker 
+          image: myappcrandres.azurecr.io/lightingsnakepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
