@@ -10,14 +10,12 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-
 - task: Kubernetes@1
   inputs:
     connectionType: 'Kubernetes Service Connection'
     kubernetesServiceEndpoint: 'myManagedCluster-devops'
     namespace: 'devops'
     command: 'delete'
-    useConfigurationFile: true
-    configuration: 'manifests/*.yml'
+    arguments: 'manifests/deployment.yml'
     secretType: 'dockerRegistry'
     containerRegistryType: 'Azure Container Registry'
