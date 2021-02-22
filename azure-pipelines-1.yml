@@ -3,9 +3,6 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- master
-
 pool:
   vmImage: ubuntu-latest
 
@@ -16,6 +13,6 @@ steps:
     kubernetesServiceEndpoint: 'myManagedCluster-devops'
     namespace: 'devops'
     command: 'delete'
-    arguments: 'manifests/deployment.yml'
+    arguments: 'lightingsnakepipelinesjavascriptdocker'
     secretType: 'dockerRegistry'
     containerRegistryType: 'Azure Container Registry'
