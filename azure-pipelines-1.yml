@@ -13,6 +13,6 @@ steps:
     kubernetesServiceEndpoint: 'myManagedCluster-devops'
     namespace: 'devops'
     command: 'delete'
-    arguments: 'lightingsnakepipelinesjavascriptdocker'
+    arguments: 'deploy lightingsnakepipelinesjavascriptdocker'
     secretType: 'dockerRegistry'
     containerRegistryType: 'Azure Container Registry'
