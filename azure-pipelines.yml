@@ -82,6 +82,7 @@ stages:
                 $(imagePullSecret)
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
+              arguments: --record
 
   - deployment: DeployPullRequest
     displayName: Deploy Pull request
