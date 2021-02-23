@@ -3,8 +3,7 @@ kind: Deployment
 metadata:
   name: lightingsnakepipelinesjavascriptdocker
   annotations:
-    build: two
-    builder: john-doe
+    kubernetes.io/change-cause: "1.2.1"
 spec:
   replicas: 1
   selector:
