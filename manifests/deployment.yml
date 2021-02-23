@@ -1,7 +1,10 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: lightingsnakepipelinesjavascriptdocker 
+  name: lightingsnakepipelinesjavascriptdocker
+  annotations:
+    build: two
+    builder: john-doe
 spec:
   replicas: 1
   selector:
